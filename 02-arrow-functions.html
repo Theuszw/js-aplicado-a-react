@@ -10,18 +10,15 @@
 
   <script>
 
+    // Função sintaxe tradicional
+    function nomeDaFuncao() {
+      exibirNaTela('Função de sintaxe tradicional...');
+    }
 
-
-// Função sintaxe tradicional
-function nomeDaFuncao() {
-  exibirNaTela('Função de sintaxe tradicional...');
-}
-
-// Função anõnima
-var outraFuncao = function() {
-  exibirNaTela('Outra forma de declarar função...');
-}
-
+    // Função anônima
+    var outraFuncao = function() {
+      exibirNaTela('Outra forma de declarar função...');
+    }
 
     // Chamada da função
     nomeDaFuncao();
@@ -33,14 +30,11 @@ var outraFuncao = function() {
     calcule a diferença entre eles e retorne o resultado
     para uma variável externa */
 
+    function exercicio(valor1,valor2) {
+      return valor1 - valor2;
+    }
 
-
-function exercicio(valor1,valor2) {
-  return valor1 - valor2;
-}
-
-let resultado = exercicio(10,3);
-
+    let resultado = exercicio(10,3);
 
     exibirNaTela(resultado);
 
@@ -68,7 +62,7 @@ let resultado = exercicio(10,3);
     const multiplicaValores = (valor, fator = 2) => valor * fator;
 
     exibirNaTela(multiplicaValores(10, 3));
-    exibirNaTela(multiplicaValores(50, 4));
+    exibirNaTela(multiplicaValores(50));
     
     exibirNaTela('==========================');
 
@@ -76,20 +70,11 @@ let resultado = exercicio(10,3);
     - Monte uma arrow function que receba um nome de pessoa e a converta para letras maiúsculas.
     - Chame a função 3x (passando nomes diferentes) e exibindo no console e tela os resultados */
 
-    
+    let converterMaiuscula = nome => nome.toUpperCase();
 
-    const converterNomeMaiusculo = (nome) => {
-    return nome.toUpperCase();
-}
-
-const nomes = ['Yuri Alberto', 'Rodrigo Garro', 'Igor Coronado'];
-
-nomes.forEach(nome => {
-    const nomeMaiusculo = converterNomeMaiusculo(nome);
-    console.log(nomeMaiusculo);
-    document.body.innerHTML += `<p>${nomeMaiusculo}</p>`;
-});
-
+    exibirNaTela(converterMaiuscula('Ignacio'));
+    exibirNaTela(converterMaiuscula('Gisele'));
+    exibirNaTela(converterMaiuscula('Linda'));
 
     function exibirNaTela(texto) {
       // Exibe a mensagem no console do navegador
